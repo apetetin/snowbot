@@ -60,7 +60,7 @@ Bot.on :postback do |postback|
                               buttons:[
                                 {
                                   type: "web_url",
-                                  url: "https://www.messenger.com/t/509778846073901",
+                                  url: "https://www.messenger.com/t/snowbotsapp",
                                   title: "Start chatting with Snowbot now 🤖"
                                 }
                               ]
