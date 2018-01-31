@@ -21,6 +21,8 @@
         <h6><strong><%= humanized_money(@order.amount) %>€</strong></h6>
       </div>
     </div>
+    <h6>Click on the links below to finalize your purchase</h6>
+    <h6><i class="fa fa-hand-o-down" aria-hidden="true"></i></h6>
   </div>
 
   <%# current_user.orders.each do |order| %>
@@ -76,6 +78,7 @@
           </div>
         </div>
       </div>
+    <p class="purchase-link text-center"><i class="fa fa-credit-card" aria-hidden="true"></i><%= link_to '  Book on Homeaway', @offer.flat_url, target: '_blank' %></p>
     </div>
 
     <div class="col-xs-12 col-sm-4">
@@ -93,6 +96,7 @@
           </div>
         </div>
       </div>
+    <p class="purchase-link text-center"><i class="fa fa-credit-card" aria-hidden="true"></i><%= link_to '  Book on Drivy', @offer.car_url, target: '_blank' %></p>
     </div>
 
   </div>

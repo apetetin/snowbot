@@ -40,7 +40,6 @@ class FetchHomeAwayService
     available_flats = listings['entries']
 
     best_rated_available_flats = []
-    flatphoto =
     available_flats.each do |flat|
       if flat['reviewAverage'].to_f >= 4 && flat['priceQuote']['averageNightly'] > 150
         best_rated_available_flats << flat
@@ -56,7 +55,8 @@ class FetchHomeAwayService
       ratings: flat['reviewAverage'],
       photo: 'https://www.skiworld.co.uk/images/uploads/photos/large/chalet-tetra-int-lounge_288.jpg',
       title: flat['headline'],
-      bedrooms_nb: flat['bedrooms']
+      bedrooms_nb: flat['bedrooms'],
+      url: flat['listingUrl']
     )
   end
 end

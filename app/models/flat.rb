@@ -1,5 +1,5 @@
 class Flat
-  attr_accessor :bedrooms_nb, :location, :id_homeaway, :price_by_night, :photo, :domain, :title, :ratings
+  attr_accessor :bedrooms_nb, :url, :location, :id_homeaway, :price_by_night, :photo, :domain, :title, :ratings
 
   def initialize(attributes = {})
     @location = attributes[:location]
@@ -10,5 +10,6 @@ class Flat
     @ratings = attributes[:ratings]
     @title = attributes[:title]
     @bedrooms_nb = attributes[:bedrooms_nb]
+    @url = attributes[:url]
   end
 end

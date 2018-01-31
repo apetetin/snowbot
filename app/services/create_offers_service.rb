@@ -55,7 +55,9 @@ class CreateOffersService
         car_price: car.price,
         car_title: car.title,
         car_photo: car.photo,
-        flat_bedrooms_nb: flat.bedrooms_nb
+        car_url: car.url,
+        flat_bedrooms_nb: flat.bedrooms_nb,
+        flat_url: flat.url
       )
       offer.total_price(diff_days)
       offer.save!
