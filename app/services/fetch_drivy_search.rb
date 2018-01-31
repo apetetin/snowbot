@@ -44,11 +44,13 @@ class FetchDrivySearch
       sort_by { |k| k['humanPrice'].delete('€').delete(" ").to_i }.
       first(@attributes[:nb_cars])
     cars_selection.map do |car|
+      url = 'https://www.drivy.com' + car['friendlyCarPath']
       Car.new(
         id_drivy: car['id'],
         price: car['humanPrice'].delete('€').delete(" ").to_i,
         title: car['carTitle'],
-        photo: car['carThumbUrl']
+        photo: car['carThumbUrl'],
+        url: url
       )
     end
   end
