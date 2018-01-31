@@ -40,6 +40,7 @@ class FetchHomeAwayService
     available_flats = listings['entries']
 
     best_rated_available_flats = []
+    flatphoto =
     available_flats.each do |flat|
       if flat['reviewAverage'].to_f >= 4 && flat['priceQuote']['averageNightly'] > 150
         best_rated_available_flats << flat
@@ -53,7 +54,7 @@ class FetchHomeAwayService
       location: flat['location']['city'],
       price_by_night: flat['priceQuote']['averageNightly'].to_f.ceil,
       ratings: flat['reviewAverage'],
-      photo: 'app/assets/images/flat-arcs.jpg',
+      photo: 'http://res.cloudinary.com/dol1aw7c8/image/upload/v1517415409/92334c0e-bc77-4632-878f-f9cff07944a3.c10_fw8dun.jpg',
       title: flat['headline'],
       bedrooms_nb: flat['bedrooms']
     )
