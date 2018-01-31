@@ -54,7 +54,7 @@ class FetchHomeAwayService
       location: flat['location']['city'],
       price_by_night: flat['priceQuote']['averageNightly'].to_f.ceil,
       ratings: flat['reviewAverage'],
-      photo: 'http://res.cloudinary.com/dol1aw7c8/image/upload/v1517415409/92334c0e-bc77-4632-878f-f9cff07944a3.c10_fw8dun.jpg',
+      photo: 'https://www.skiworld.co.uk/images/uploads/photos/large/chalet-tetra-int-lounge_288.jpg',
       title: flat['headline'],
       bedrooms_nb: flat['bedrooms']
     )

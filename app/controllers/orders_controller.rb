@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
 
     @order.save
 
-    redirect_to new_order_payment_path(@order)
+    redirect_to orders_path
   end
 
   private
